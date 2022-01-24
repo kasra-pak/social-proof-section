@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+html { font-size: 15px; }
+
+body {
+  font-family: 'Spartan', sans-serif;
+  background: url('images/bg-pattern-top-mobile.svg') no-repeat top, url('images/bg-pattern-bottom-mobile.svg') no-repeat bottom;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 2.8em;
+  padding: 1rem 1.2rem;
+}
+
+header { text-align: center; }
+
+.header__title {
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+  font-size: 2.15rem;
+  line-height: 2.1rem;
+}
+
+.header__subtitle {
+  color: var(--Dark-Grayish-Magenta);
+  font-weight: 500;
+  line-height: 1.65rem;
+  margin: 0;
+}
+
+.rating {
+  text-align: center;
+  background-color: var(--Light-Grayish-Magenta);
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 1rem
+}
+
+.rating + .rating { margin-top: 1rem; }
+.five-stars { margin-bottom: 0.5rem; }
+
+.star { width: 18px; }
+.star + .star { margin-left: 0.3rem; }
+
+.reviews {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.buyer-review-card {
+  background-color: var(--Very-Dark-Magenta);
+  color: var(--White);
+  border-radius: 10px;
+  padding: 2.5em 2.25em;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-size: 0.9rem;
+  align-items: end;
+}
+
+.buyer-review-card > * { margin: 0; }
+
+.buyer__avatar {
+  border-radius: 50%;
+  width: 40px;
+  grid-row: span 2;
+  margin-right: 1.5rem;
+}
+
+.buyer__name { font-weight: 500; }
+
+.buyer__info { color: var(--Soft-Pink); }
+
+.buyer__review__text {
+  grid-column: 1 / -1;
+  margin-top: 2rem;
+  line-height: 1.35rem;
+}
+
