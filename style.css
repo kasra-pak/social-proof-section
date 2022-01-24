@@ -30,7 +30,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-gap: 2.8em;
+  gap: 2.8em;
   padding: 1rem 1.2rem;
 }
 
@@ -67,7 +67,7 @@ header { text-align: center; }
 
 .reviews {
   display: grid;
-  grid-gap: 1rem;
+  gap: 1rem;
 }
 
 .buyer-review-card {
@@ -91,7 +91,6 @@ header { text-align: center; }
 }
 
 .buyer__name { font-weight: 500; }
-
 .buyer__info { color: var(--Soft-Pink); }
 
 .buyer__review__text {
@@ -100,3 +99,56 @@ header { text-align: center; }
   line-height: 1.35rem;
 }
 
+@media (min-width: 1000px) {
+  body {
+    background: url('images/bg-pattern-top-desktop.svg')no-repeat top left, url('images/bg-pattern-bottom-desktop.svg') no-repeat bottom right;
+    justify-items: center;
+  }
+
+  .wrapper {
+    width: 82%;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5em 9em;
+  }
+
+  header { text-align: left; }
+
+  .header__title {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .rating {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: start;
+    align-items: center;
+    padding: 1.2rem 2.25rem;
+  }
+
+  .rating:nth-child(2) {
+    transform: translateX(-45px);
+  }
+
+  .rating:nth-child(1) {
+    transform: translateX(-90px);
+  }
+
+  .five-stars { margin: 0; }
+
+  .reviews {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / -1;
+    gap: 1.75em
+  }
+
+  .buyer-review-card:nth-child(2) {
+    transform: translateY(15px);
+  }
+
+  .buyer-review-card:nth-child(3) {
+    transform: translateY(30px);
+  }
+
+}
